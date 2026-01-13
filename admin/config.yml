@@ -7,11 +7,16 @@ public_folder: "/images"
 
 collections:
   - name: "blog"
-    label: "Mis Productos y Reseñas"
+    label: "Mis Artículos Pro"
     folder: "blog"
     create: true
+    slug: "{{slug}}"
     fields:
-      - { label: "Título del Producto", name: "title", widget: "string" }
+      - { label: "Título del Post", name: "title", widget: "string" }
+      - { label: "Categoría (ej: Salud Mental)", name: "category", widget: "string" }
+      - { label: "Tiempo de Lectura (ej: 4 min)", name: "reading_time", widget: "string" }
+      - { label: "Imagen de Portada", name: "image", widget: "image" }
+      - { label: "Texto Introductorio (Negrita)", name: "intro", widget: "text" }
+      - { label: "Cuerpo del Artículo (Markdown)", name: "body", widget: "markdown" }
       - { label: "Enlace de Amazon", name: "amazon_link", widget: "string" }
-      - { label: "Imagen", name: "image", widget: "image" }
-      - { label: "Tu Opinión (Psicología y Tech)", name: "body", widget: "markdown" }
+      - { label: "Texto del Botón Amazon", name: "amazon_button", widget: "string", default: "Ver en Amazon" }
