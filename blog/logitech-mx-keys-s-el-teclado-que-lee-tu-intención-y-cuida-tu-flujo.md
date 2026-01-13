@@ -2,7 +2,7 @@
 title: "Logitech MX Keys S: El teclado que lee tu intención y cuida tu flujo"
 category: salud
 reading_time: "2"
-image: /images/radoslav-bali-hcgwvutfbxm-unsplash.jpg
+image: https://m.media-amazon.com/images/I/714Q+mnP4KL._AC_SL1500_.jpg
 intro: A
 amazon_link: https://amzn.to/4qVvYxm
 amazon_button: a
