@@ -1,12 +1,16 @@
 ---
 title: "Logitech MX Keys S: El teclado que lee tu intención y cuida tu flujo"
-amazon_link: https://amzn.to/4qVvYxm
+category: salud
+reading_time: "2"
 image: /images/radoslav-bali-hcgwvutfbxm-unsplash.jpg
+intro: A
+amazon_link: https://amzn.to/4qVvYxm
+amazon_button: a
 ---
 
 
 
-`¿Por qué lo eligen los expertos?` 
+¿Por qué lo eligen los expertos?
 
  `Lo que hace especial a este teclado es su **retroiluminación por proximidad**. Se enciende cuando tus manos se acercan, creando un anclaje psicológico de 'es hora de trabajar'.` 
 
