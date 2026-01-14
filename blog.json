@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "titulo": "La regla de los 2 minutos: Orden en el caos digital",
+        "resumen": "Si tardas menos de 2 minutos en organizar ese archivo o contestar ese email, hazlo ya. Cómo aplicar este principio estoico a tu vida digital.",
+        "categoria": "Productividad",
+        "imagen": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=800",
+        "fecha": "14 Ene 2026",
+        "link": "art1.html"
+    },
+    {
+        "id": 2,
+        "titulo": "¿Por qué el papel nos hace más listos?",
+        "resumen": "Escribir a mano activa áreas del cerebro que el teclado ignora. Por qué deberías tener siempre una libreta analógica junto a tu portátil.",
+        "categoria": "Ciencia",
+        "imagen": "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800",
+        "fecha": "10 Ene 2026",
+        "link": "art2.html"
+    },
+    {
+        "id": 3,
+        "titulo": "Ruido Blanco vs. Silencio: ¿Qué es mejor?",
+        "resumen": "Analizamos si es mejor trabajar en silencio absoluto (con tapones) o con sonido ambiente. La respuesta depende de tu tipo de cerebro.",
+        "categoria": "Enfoque",
+        "imagen": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=800",
+        "fecha": "05 Ene 2026",
+        "link": "art3.html"
+    },
+    {
+        "id": 4,
+        "titulo": "Minimalismo Digital: Limpia tu escritorio",
+        "resumen": "Tener 50 iconos en el escritorio genera cortisol visual. Guía rápida para tener un entorno de trabajo que te de paz mental.",
+        "categoria": "Organización",
+        "imagen": "https://images.unsplash.com/photo-1706615737134-a7778e037715?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "fecha": "28 Dic 2025",
+        "link": "art4.html"
+    },
+    {
+        "id": 5,
+        "titulo": "La fatiga por decisión al comprar tecnología",
+        "resumen": "¿Te paralizas al elegir entre dos productos casi iguales? Te enseño trucos psicológicos para tomar decisiones de compra más rápidas y seguras.",
+        "categoria": "Psicología",
+        "imagen": "https://images.unsplash.com/photo-1555421689-d68471e189f2?auto=format&fit=crop&q=80&w=800",
+        "fecha": "20 Dic 2025",
+        "link": "art5.html"
+    },
+    {
+        "id": 6,
+        "titulo": "Dopamina barata: Por qué no puedes dejar el móvil",
+        "resumen": "Las notificaciones están diseñadas para secuestrar tu atención. Herramientas físicas para recuperar el control de tu tiempo.",
+        "categoria": "Bienestar",
+        "imagen": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800",
+        "fecha": "15 Dic 2025",
+        "link": "art6.html"
+    }
+]

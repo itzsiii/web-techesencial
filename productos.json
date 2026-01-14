@@ -1,0 +1,62 @@
+[
+    {
+        "titulo": "Soundcore Q20i",
+        "descripcion": "El rey del silencio 'low cost'. Su cancelación de ruido híbrida elimina el tráfico y las voces de la oficina por una fracción de lo que cuestan unos Sony. 40 horas de batería y graves potentes.",
+        "precio": "~37€",
+        "imagen": "https://m.media-amazon.com/images/I/61+2Wr079NL._AC_SL1500_.jpg",
+        "badge": "Top Ventas",
+        "link": "https://amzn.to/4qRIMon",
+        "categorias": "enfoque entretenimiento",
+        "keywords": "auriculares cascos ruido musica bluetooth soundcore anker q20i"
+    },
+    {
+        "titulo": "Soundcore Q30",
+        "descripcion": "Para los que buscan un audio superior. Tienen sonido Hi-Res certificado y, lo mejor: una App brutal para personalizar la cancelación de ruido a tu gusto. Si puedes invertir un poco más, tus oídos lo notarán.",
+        "precio": "~57€",
+        "imagen": "https://m.media-amazon.com/images/I/61TWA8UQjQL._AC_SL1500_.jpg",
+        "badge": "Hi-Res Audio",
+        "link": "https://amzn.to/49xSZiD",
+        "categorias": "enfoque entretenimiento",
+        "keywords": "auriculares q30 anker soundcore cancelacion ruido hi-res app"
+    },
+    {
+        "titulo": "Auriculares KVIDIO",
+        "descripcion": "La batería infinita. Olvídate de cargarlos durante semanas gracias a sus 55h de autonomía. Son extremadamente ligeros, cómodos y cuestan lo mismo que una cena. Imposible dar más por menos.",
+        "precio": "~23€",
+        "imagen": "https://m.media-amazon.com/images/I/71Hx8b6HGbL._AC_SL1500_.jpg",
+        "badge": "Súper Precio",
+        "link": "https://amzn.to/4qSsnjq",
+        "categorias": "entretenimiento",
+        "keywords": "auriculares kvidio baratos bluetooth bateria larga"
+    },
+    {
+        "titulo": "Cargador UGREEN 20W",
+        "descripcion": "El básico que nunca falla. Ideal para cargar el móvil a máxima velocidad sin ocupar espacio. Perfecto para llevar en cualquier bolsillo.",
+        "precio": "~14€",
+        "imagen": "https://m.media-amazon.com/images/I/41wbUhgYjpL._AC_SL1500_.jpg",
+        "badge": "Compacto",
+        "link": "https://amzn.to/4pyyaJT",
+        "categorias": "organizacion tecnologia",
+        "keywords": "cargador usb c 20w ugreen rapido movil iphone samsung"
+    },
+    {
+        "titulo": "UGREEN Nexode 65W",
+        "descripcion": "El rey de la organización. 3 puertos en 1 solo enchufe. Carga tu portátil, móvil y auriculares a la vez. Tecnología GaN que no se calienta.",
+        "precio": "~30€",
+        "imagen": "https://m.media-amazon.com/images/I/51idPYwnCyL._AC_SL1500_.jpg",
+        "badge": "Top Ventas",
+        "link": "https://amzn.to/4sDPMXw",
+        "categorias": "organizacion productividad",
+        "keywords": "cargador 65w gan 3 puertos ugreen nexode laptop multicargha"
+    },
+    {
+        "titulo": "UGREEN Nexode 100W",
+        "descripcion": "Potencia bruta para setups profesionales. Con 4 puertos y 100W, puedes cargar dos portátiles simultáneamente. Adiós definitivo a los ladrones de enchufes.",
+        "precio": "~50€",
+        "imagen": "https://m.media-amazon.com/images/I/51JgueS8DfL._AC_SL1500_.jpg",
+        "badge": "Pro",
+        "link": "https://amzn.to/4sYurbN",
+        "categorias": "organizacion pro",
+        "keywords": "cargador 100w 4 puertos ugreen escritorio gan potente"
+    }
+]
