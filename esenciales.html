@@ -31,12 +31,11 @@
 
             <div class="hidden md:flex items-center gap-8">
                 <a href="index.html" class="text-xs font-medium text-slate-300 hover:text-white transition">Inicio</a>
-                <a href="esenciales.html" class="text-xs font-bold text-white transition">Cosas Útiles</a>
-                <a href="blog.html" class="text-xs font-medium text-slate-300 hover:text-white transition">Blog</a>
+                <a href="esenciales.html" class="text-xs font-bold text-white transition">Cosas Útiles</a> <a href="blog.html" class="text-xs font-medium text-slate-300 hover:text-white transition">Blog</a>
                 
                 <a href="en/esenciales.html" class="group flex items-center gap-2 px-2 py-2 rounded-full hover:bg-white/5 transition-all duration-300" title="Switch to English">
                     <svg class="w-4 h-4 text-slate-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
-                    <span class="hidden sm:inline text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-wide">English</span>
+                    <span class="hidden sm:inline text-[10px] font-bold text-slate-400 group-hover:text-white uppercase tracking-wide">English</span>
                 </a>
 
                 <a href="index.html#producto" class="text-[10px] font-bold text-cyan-400 border border-cyan-400/30 px-3 py-1.5 rounded-full hover:bg-cyan-400/10 transition whitespace-nowrap">
@@ -127,14 +126,14 @@
     </footer>
 
     <script>
-        // SCRIPT DEL MENÚ MÓVIL (NUEVO)
+        // --- SCRIPT DEL MENÚ MÓVIL (NUEVO) ---
         const btnMenu = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
         btnMenu.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
 
-        // SCRIPT ORIGINAL INTACTO
+        // --- SCRIPT DE PRODUCTOS ORIGINAL (INTACTO) ---
         const productsGrid = document.getElementById('productsGrid');
         const searchInput = document.getElementById('searchInput');
         const noResultsMsg = document.getElementById('noResults');
