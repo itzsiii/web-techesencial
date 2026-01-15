@@ -21,58 +21,78 @@
 <body class="bg-slate-950 text-slate-50 antialiased selection:bg-cyan-500 selection:text-white pb-16">
 
     <nav class="fixed top-0 left-0 w-full z-50 border-b border-slate-800/50 bg-slate-950/80 backdrop-blur-md">
-        <div class="max-w-5xl mx-auto px-4 md:px-6 h-16 md:h-20 flex justify-between items-center">
+        <div class="max-w-5xl mx-auto px-6 h-16 md:h-20 flex justify-between items-center">
             
-            <a href="index.html" class="text-sm md:text-lg font-extrabold tracking-tighter text-white flex items-center gap-2 shrink-0">
+            <a href="index.html" class="text-lg font-extrabold tracking-tighter text-white flex items-center gap-2 z-50">
                 <img src="favicon.png" alt="Logo" class="h-6 w-auto object-contain drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">
-                <span class="whitespace-nowrap">Tech Esencial.</span>
+                Tech Esencial.
             </a>
 
-            <div class="flex items-center gap-2 md:gap-8 shrink-0 overflow-x-auto no-scrollbar">
-                <a href="index.html" class="hidden md:block text-xs font-bold text-white transition">Inicio</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-xs font-bold text-white transition">Inicio</a>
+                <a href="esenciales.html" class="text-xs font-medium text-slate-300 hover:text-white transition">Cosas Útiles</a>
+                <a href="blog.html" class="text-xs font-medium text-slate-300 hover:text-white transition">Blog</a>
                 
-                <a href="esenciales.html" class="text-[10px] md:text-xs font-medium text-slate-300 hover:text-white transition whitespace-nowrap">Cosas Útiles</a>
-                <a href="blog.html" class="text-[10px] md:text-xs font-medium text-slate-300 hover:text-white transition">Blog</a>
-                
-                <a href="en/index.html" class="group flex items-center gap-1 md:gap-2 px-1.5 py-1.5 md:px-2 md:py-2 rounded-full hover:bg-white/5 transition-all duration-300" title="Switch to English">
+                <a href="en/index.html" class="group flex items-center gap-2 px-2 py-2 rounded-full hover:bg-white/5 transition-all duration-300" title="Switch to English">
                     <svg class="w-4 h-4 text-slate-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
-                    <span class="hidden sm:inline text-[10px] font-bold text-slate-400 group-hover:text-white uppercase tracking-wide">English</span>
+                    <span class="text-[10px] font-bold text-slate-400 group-hover:text-white uppercase tracking-wide">English</span>
                 </a>
 
-                <a href="#producto" class="text-[9px] md:text-[10px] font-bold text-cyan-400 border border-cyan-400/30 px-2 py-1 md:px-3 md:py-1.5 rounded-full hover:bg-cyan-400/10 transition whitespace-nowrap">
+                <a href="#producto" class="text-[10px] font-bold text-cyan-400 border border-cyan-400/30 px-3 py-1.5 rounded-full hover:bg-cyan-400/10 transition whitespace-nowrap">
                     RECOMENDADO
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-slate-950 border-b border-slate-800 shadow-2xl">
+            <div class="flex flex-col px-6 py-4 space-y-4">
+                <a href="index.html" class="text-sm font-bold text-white py-2 border-b border-slate-800">Inicio</a>
+                <a href="esenciales.html" class="text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-slate-800">Cosas Útiles</a>
+                <a href="blog.html" class="text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-slate-800">Blog</a>
+                <a href="en/index.html" class="text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-slate-800 flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+                    English
+                </a>
+                <a href="#producto" class="text-sm font-bold text-cyan-400 py-2">
+                    VER RECOMENDADO
                 </a>
             </div>
         </div>
     </nav>
 
-    <header class="relative pt-28 md:pt-32 pb-10 px-4 md:px-6 text-center max-w-4xl mx-auto overflow-hidden">
+    <header class="relative pt-32 pb-10 px-6 text-center max-w-4xl mx-auto overflow-hidden">
         
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-cyan-500/10 rounded-full blur-[60px] md:blur-[100px] -z-10 pointer-events-none"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
 
         <span class="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-slate-900/50 border border-slate-700 text-slate-300 text-[10px] font-bold uppercase tracking-widest mb-6 backdrop-blur-md shadow-lg">
             <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
             Investigación Cuidadosa
         </span>
 
-        <h1 class="text-3xl md:text-6xl font-extrabold tracking-tight mb-5 leading-tight md:leading-[1.15] text-white">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-5 leading-[1.15] text-white">
             Te ayudo a elegir bien,<br>
             <span class="text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 via-cyan-400 to-blue-600">sin miedo a equivocarte.</span>
         </h1>
 
-        <p class="text-sm md:text-lg text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed font-light px-2">
+        <p class="text-base md:text-lg text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed font-light">
             Hola, soy Iza. Hago el trabajo duro por ti: analizo cientos de reseñas y descarto lo malo para que encuentres <strong>solo lo que vale la pena.</strong>
         </p>
 
         <div class="flex justify-center mb-10">
-            <a href="#explorar" class="group relative px-8 md:px-10 py-3 bg-white text-slate-950 font-bold rounded-full hover:bg-cyan-50 transition shadow-[0_0_25px_rgba(34,211,238,0.4)] flex items-center justify-center gap-2 overflow-hidden text-sm md:text-base">
+            <a href="#explorar" class="group relative px-10 py-3 bg-white text-slate-950 font-bold rounded-full hover:bg-cyan-50 transition shadow-[0_0_25px_rgba(34,211,238,0.4)] flex items-center justify-center gap-2 overflow-hidden text-sm md:text-base">
                 <span class="relative z-10 flex items-center gap-2">
                     Explorar
                 </span>
             </a>
         </div>
 
-        <div class="flex justify-center px-4">
+        <div class="flex justify-center">
             <div class="inline-flex items-center gap-2 text-[10px] text-slate-500 bg-slate-950/50 border border-slate-800/80 px-3 py-1.5 rounded-full backdrop-blur-sm max-w-lg text-center leading-tight">
                 <svg class="w-3 h-3 text-slate-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 <p><span class="text-cyan-500 font-bold">Transparencia:</span> Si compras desde aquí, Amazon me da una comisión. A ti no te cuesta más y apoyas mi investigación.</p>
@@ -82,16 +102,16 @@
 
     <section class="py-10 border-y border-slate-800/50 bg-slate-900/30">
         <div class="max-w-4xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-800/50">
-                <div class="p-2 pt-4 md:pt-2">
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-2">
                     <div class="text-cyan-400 font-bold text-lg mb-1">Análisis Real</div>
                     <p class="text-xs md:text-sm text-slate-400">Leo la letra pequeña y las reseñas críticas por ti.</p>
                 </div>
-                <div class="p-2 pt-4 md:pt-2">
+                <div class="p-2 border-x border-slate-800/50">
                     <div class="text-cyan-400 font-bold text-lg mb-1">Para Todos</div>
                     <p class="text-xs md:text-sm text-slate-400">Tecnología explicada fácil. Para jóvenes y mayores.</p>
                 </div>
-                <div class="p-2 pt-4 md:pt-2">
+                <div class="p-2">
                     <div class="text-cyan-400 font-bold text-lg mb-1">Solo Calidad</div>
                     <p class="text-xs md:text-sm text-slate-400">Si tiene malas valoraciones, no entra en esta lista.</p>
                 </div>
@@ -99,10 +119,10 @@
         </div>
     </section>
 
-    <section id="explorar" class="py-16 px-4 md:px-6 max-w-5xl mx-auto scroll-mt-24">
+    <section id="explorar" class="py-16 px-6 max-w-5xl mx-auto scroll-mt-24">
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            <a href="esenciales.html" class="group relative overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 transition p-6 md:p-8 flex flex-col justify-between h-48 md:h-56">
+        <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <a href="esenciales.html" class="group relative overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 transition p-8 flex flex-col justify-between h-48 md:h-56">
                 <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
                 <div class="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition">
                     <svg class="w-12 h-12 text-cyan-900/50 group-hover:text-cyan-500/20 transform group-hover:rotate-12 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
@@ -110,14 +130,14 @@
                 <div class="relative z-10">
                     <span class="text-cyan-400 font-bold text-[10px] uppercase tracking-widest mb-2 block">El Catálogo</span>
                     <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition">Cosas Útiles</h3>
-                    <p class="text-xs md:text-sm text-slate-400">Aquí encontrarás mi selección de productos aprobados. Organización, salud y enfoque sin relleno.</p>
+                    <p class="text-sm text-slate-400">Aquí encontrarás mi selección de productos aprobados. Organización, salud y enfoque sin relleno.</p>
                 </div>
                 <div class="relative z-10 flex items-center gap-2 text-white font-bold text-xs mt-4">
                     Ver todos los productos <span class="group-hover:translate-x-1 transition">→</span>
                 </div>
             </a>
 
-            <a href="blog.html" class="group relative overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 hover:border-purple-500/50 transition p-6 md:p-8 flex flex-col justify-between h-48 md:h-56">
+            <a href="blog.html" class="group relative overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 hover:border-purple-500/50 transition p-8 flex flex-col justify-between h-48 md:h-56">
                 <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
                 <div class="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition">
                     <svg class="w-12 h-12 text-purple-900/50 group-hover:text-purple-500/20 transform group-hover:-rotate-12 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
@@ -125,7 +145,7 @@
                 <div class="relative z-10">
                     <span class="text-purple-400 font-bold text-[10px] uppercase tracking-widest mb-2 block">Estrategias</span>
                     <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-purple-400 transition">El Blog</h3>
-                    <p class="text-xs md:text-sm text-slate-400">Ideas para usar la tecnología a tu favor. Psicología, minimalismo y bienestar digital.</p>
+                    <p class="text-sm text-slate-400">Ideas para usar la tecnología a tu favor. Psicología, minimalismo y bienestar digital.</p>
                 </div>
                 <div class="relative z-10 flex items-center gap-2 text-white font-bold text-xs mt-4">
                     Leer artículos <span class="group-hover:translate-x-1 transition">→</span>
@@ -141,9 +161,9 @@
 
     </section>
 
-    <section id="producto" class="py-16 md:py-20 border-t border-slate-900">
-        <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div class="relative group cursor-pointer order-first md:order-none">
+    <section id="producto" class="py-20 border-t border-slate-900">
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="relative group cursor-pointer">
                 <div class="absolute -inset-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur opacity-20 group-hover:opacity-60 transition duration-500"></div>
                 <img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&q=80&w=1000" alt="Auriculares Sony" class="relative rounded-xl shadow-2xl w-full object-cover grayscale group-hover:grayscale-0 transition duration-700 ease-in-out">
                 <div class="absolute bottom-4 left-4 bg-slate-900/90 backdrop-blur border border-slate-700 px-3 py-1 rounded text-[10px] text-cyan-400 font-bold">Top Ventas y Valoraciones</div>
@@ -177,7 +197,7 @@
                     Una pequeña selección. Encuentra más en <a href="esenciales.html" class="text-cyan-400 underline hover:text-white">Cosas Útiles</a>.
                 </p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-3 gap-6">
                 
                 <div class="group bg-slate-900 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition duration-300 overflow-hidden flex flex-col">
                     <div class="relative h-48 overflow-hidden bg-white"> 
@@ -218,7 +238,7 @@
     </section>
 
     <section class="py-20 bg-slate-950 border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8 md:gap-10">
+        <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
             <div class="relative shrink-0">
                 <div class="absolute -inset-4 bg-gradient-to-tr from-cyan-500 to-blue-600 rounded-full blur opacity-30"></div>
                 <img src="Pfp.jpg" alt="Iza Ogbinar" class="relative w-28 h-28 md:w-32 md:h-32 rounded-full border-2 border-white object-cover">
@@ -264,7 +284,15 @@
             </button>
         </div>
     </div>
+    
     <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+        
         if (!localStorage.getItem('cookiesAccepted')) {
             document.getElementById('cookie-banner').style.display = 'block';
         }
