@@ -14,20 +14,14 @@
 
     <style>
         body { font-family: 'Inter', sans-serif; }
-        /* Ocultar la barra de scroll fea pero mantener la funcionalidad */
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-50 antialiased pb-16">
+<body class="bg-slate-950 text-slate-50 antialiased pb-16 overflow-x-hidden">
 
     <nav class="fixed top-0 left-0 w-full z-50 border-b border-slate-800/50 bg-slate-950/80 backdrop-blur-md">
-        <div class="max-w-5xl mx-auto px-6 h-16 md:h-20 flex justify-between items-center">
+        <div class="max-w-5xl mx-auto px-4 md:px-6 h-16 md:h-20 flex justify-between items-center">
             
             <a href="index.html" class="text-lg font-extrabold tracking-tighter text-white flex items-center gap-2 z-50">
                 <img src="favicon.png" alt="Logo" class="h-6 w-auto object-contain drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">
@@ -49,7 +43,7 @@
                 </a>
             </div>
 
-            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-2">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -72,7 +66,7 @@
         </div>
     </nav>
 
-    <header class="pt-32 pb-12 px-6 text-center max-w-3xl mx-auto relative">
+    <header class="pt-32 pb-12 px-6 text-center max-w-3xl mx-auto relative overflow-hidden">
          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-900/20 rounded-full blur-[90px] -z-10 pointer-events-none"></div>
 
         <span class="inline-block py-1 px-3 rounded-full bg-slate-900 text-cyan-400 text-[10px] font-bold uppercase tracking-widest mb-4 border border-slate-800 shadow-sm">
@@ -86,17 +80,17 @@
         </p>
     </header>
 
-    <section class="max-w-7xl mx-auto px-6 pb-20 relative group/slider">
+    <section class="max-w-7xl mx-auto px-4 md:px-6 pb-20 relative group/slider overflow-hidden">
         
-        <button id="scrollLeft" class="absolute left-2 md:left-0 top-1/2 -translate-y-1/2 z-20 bg-slate-900/80 hover:bg-cyan-500 hover:text-white border border-slate-700 text-cyan-400 p-3 rounded-full backdrop-blur-md shadow-2xl transition-all opacity-0 group-hover/slider:opacity-100 disabled:opacity-0 translate-x-0 hover:scale-110">
+        <button id="scrollLeft" class="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-slate-900/80 hover:bg-cyan-500 hover:text-white border border-slate-700 text-cyan-400 p-3 rounded-full backdrop-blur-md shadow-2xl transition-all opacity-0 group-hover/slider:opacity-100 disabled:opacity-0 translate-x-0 hover:scale-110">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
         </button>
 
-        <div id="blogContainer" class="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scroll-smooth scrollbar-hide px-4">
+        <div id="blogContainer" class="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scroll-smooth scrollbar-hide px-2 md:px-4">
             <div class="text-center w-full text-slate-500 animate-pulse text-xs py-10">Cargando pensamientos...</div>
         </div>
 
-        <button id="scrollRight" class="absolute right-2 md:right-0 top-1/2 -translate-y-1/2 z-20 bg-slate-900/80 hover:bg-cyan-500 hover:text-white border border-slate-700 text-cyan-400 p-3 rounded-full backdrop-blur-md shadow-2xl transition-all opacity-100 md:opacity-0 md:group-hover/slider:opacity-100 translate-x-0 hover:scale-110">
+        <button id="scrollRight" class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-slate-900/80 hover:bg-cyan-500 hover:text-white border border-slate-700 text-cyan-400 p-3 rounded-full backdrop-blur-md shadow-2xl transition-all opacity-0 group-hover/slider:opacity-100 translate-x-0 hover:scale-110">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
         </button>
 
@@ -108,19 +102,16 @@
     </footer>
 
     <script>
-        // SCRIPT DEL MENÚ MÓVIL (NUEVO)
         const btnMenu = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
         btnMenu.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
 
-        // SCRIPT ORIGINAL DEL BLOG (INTACTO)
         const blogContainer = document.getElementById('blogContainer');
         const btnLeft = document.getElementById('scrollLeft');
         const btnRight = document.getElementById('scrollRight');
 
-        // 1. CARGAR DATOS
         fetch('blog.json')
             .then(response => response.json())
             .then(data => {
@@ -131,7 +122,6 @@
                 blogContainer.innerHTML = '<p class="text-center text-red-400 w-full">Error al cargar artículos.</p>';
             });
 
-        // 2. PINTAR ARTÍCULOS
         function renderBlog(articles) {
             blogContainer.innerHTML = '';
             
@@ -158,15 +148,16 @@
             });
         }
 
-        // 3. LÓGICA DEL BOTÓN (FLECHAS)
-        btnRight.addEventListener('click', () => {
-            blogContainer.scrollBy({ left: 360, behavior: 'smooth' });
-        });
-
-        btnLeft.addEventListener('click', () => {
-            blogContainer.scrollBy({ left: -360, behavior: 'smooth' });
-        });
-
+        if(btnRight) {
+            btnRight.addEventListener('click', () => {
+                blogContainer.scrollBy({ left: 360, behavior: 'smooth' });
+            });
+        }
+        if(btnLeft) {
+            btnLeft.addEventListener('click', () => {
+                blogContainer.scrollBy({ left: -360, behavior: 'smooth' });
+            });
+        }
     </script>
 </body>
 </html>
