@@ -127,16 +127,16 @@
     </footer>
 
     <script>
-        // SCRIPT DEL MENÚ HAMBURGUESA (AÑADIDO)
+        // SCRIPT DEL MENÚ (AÑADIDO PARA QUE FUNCIONE LA HAMBURGUESA)
         const btnMenu = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
-        if(btnMenu && menu) {
+        if(btnMenu && menu){
             btnMenu.addEventListener('click', () => {
                 menu.classList.toggle('hidden');
             });
         }
 
-        // --- TU SCRIPT ORIGINAL (INTACTO) ---
+        // --- TU SCRIPT ORIGINAL INTACTO ---
         const productsGrid = document.getElementById('productsGrid');
         const searchInput = document.getElementById('searchInput');
         const noResultsMsg = document.getElementById('noResults');
