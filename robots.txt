@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://techesencial.netlify.app/sitemap.xml
