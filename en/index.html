@@ -3,110 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Essentials | Iza's Selection</title>
-    <meta name="description" content="Independent analysis of the best tech tools for productivity and psychology.">
+    <title>Tech Essentials | Smart Buying</title>
+    <meta name="description" content="Deep research of tech and essential products. I save you hours of searching.">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     
     <link rel="icon" type="image/png" href="../favicon.png" sizes="32x32">
     <link rel="icon" type="image/png" href="../favicon.png" sizes="64x64">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .glow { background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.15) 0%, rgba(15, 23, 42, 0) 50%); }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-50 antialiased selection:bg-cyan-500 selection:text-white pb-16">
 
-    <nav class="w-full py-6 px-4 md:px-6 flex justify-between items-center max-w-4xl mx-auto border-b border-slate-800/50 backdrop-blur-sm fixed top-0 left-0 right-0 z-40 bg-slate-950/80">
-        <a href="index.html" class="text-lg md:text-xl font-extrabold tracking-tighter text-white flex items-center gap-2">
-            <img src="../favicon.png" alt="Logo" class="h-8 w-auto object-contain drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">
-            Tech Essentials.
-        </a>
-        
-        <div class="flex items-center gap-2 md:gap-8">
-            <a href="blog.html" class="text-xs md:text-sm font-medium text-slate-300 hover:text-white transition">Blog</a>
+    <nav class="fixed top-0 left-0 w-full z-50 border-b border-slate-800/50 bg-slate-950/80 backdrop-blur-md">
+        <div class="max-w-5xl mx-auto px-6 h-16 md:h-20 flex justify-between items-center">
             
-            <a href="../index.html" class="group flex items-center gap-2 px-2 py-2 rounded-full hover:bg-white/5 transition-all duration-300" title="Volver a Español">
-                <svg class="w-5 h-5 text-slate-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
-                </svg>
-                <span class="hidden sm:inline text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-wide">Español</span>
+            <a href="index.html" class="text-lg font-extrabold tracking-tighter text-white flex items-center gap-2 z-50 whitespace-nowrap">
+                <img src="../favicon.png" alt="Logo" class="h-6 w-auto object-contain drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">
+                Tech Essentials.
             </a>
 
-            <a href="#product" class="text-[10px] md:text-xs font-bold text-cyan-400 border border-cyan-400/30 px-3 md:px-4 py-2 rounded-full hover:bg-cyan-400/10 transition whitespace-nowrap">
-                SEE WINNER
-            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-xs font-bold text-white transition">Home</a>
+                <a href="esenciales.html" class="text-xs font-medium text-slate-300 hover:text-white transition">Essentials</a>
+                <a href="blog.html" class="text-xs font-medium text-slate-300 hover:text-white transition">Blog</a>
+                
+                <a href="../index.html" class="group flex items-center gap-2 px-2 py-2 rounded-full hover:bg-white/5 transition-all duration-300" title="Switch to Spanish">
+                    <svg class="w-4 h-4 text-slate-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+                    <span class="text-[10px] font-bold text-slate-400 group-hover:text-white uppercase tracking-wide">Español</span>
+                </a>
+
+                <a href="#product" class="text-[10px] font-bold text-cyan-400 border border-cyan-400/30 px-3 py-1.5 rounded-full hover:bg-cyan-400/10 transition whitespace-nowrap">
+                    RECOMMENDED
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-slate-950 border-b border-slate-800 shadow-2xl">
+            <div class="flex flex-col px-6 py-4 space-y-4">
+                <a href="index.html" class="text-sm font-bold text-white py-2 border-b border-slate-800">Home</a>
+                <a href="esenciales.html" class="text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-slate-800">Essentials</a>
+                <a href="blog.html" class="text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-slate-800">Blog</a>
+                
+                <a href="../index.html" class="text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-slate-800 flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+                    Español
+                </a>
+                <a href="#product" class="text-sm font-bold text-cyan-400 py-2">
+                    SEE RECOMMENDED
+                </a>
+            </div>
         </div>
     </nav>
 
-    <header class="pt-32 pb-20 px-6 text-center max-w-3xl mx-auto glow">
-        <span class="inline-block py-1 px-3 rounded-full bg-slate-800 text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-6 border border-slate-700">
-            Independent Research
+    <header class="relative pt-32 pb-10 px-6 text-center max-w-4xl mx-auto overflow-hidden">
+        
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+
+        <span class="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-slate-900/50 border border-slate-700 text-slate-300 text-[10px] font-bold uppercase tracking-widest mb-6 backdrop-blur-md shadow-lg">
+            <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+            Careful Research
         </span>
-        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-none text-white">
-            Less noise.<br>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">More clarity.</span>
+
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-5 leading-[1.15] text-white">
+            I help you choose wisely,<br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 via-cyan-400 to-blue-600">without fear of mistakes.</span>
         </h1>
-        <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed font-light">
-            At Tech Essentials, I filter the market to find the tools that truly improve your psychology and productivity.
-            <strong class="text-slate-200 font-semibold">No fluff. Only what works.</strong>
+
+        <p class="text-base md:text-lg text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed font-light">
+            Hi, I'm Iza. I do the hard work for you: analyzing hundreds of reviews and discarding the bad so you find <strong>only what is worth it.</strong>
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#product" class="group px-8 py-4 bg-white text-slate-950 font-bold rounded-full hover:bg-cyan-50 transition shadow-[0_0_20px_rgba(255,255,255,0.3)] flex items-center justify-center gap-2">
-                See #1 Choice
-                <svg class="w-4 h-4 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+
+        <div class="flex justify-center mb-10">
+            <a href="#explorar" class="group relative px-10 py-3 bg-white text-slate-950 font-bold rounded-full hover:bg-cyan-50 transition shadow-[0_0_25px_rgba(34,211,238,0.4)] flex items-center justify-center gap-2 overflow-hidden text-sm md:text-base">
+                <span class="relative z-10 flex items-center gap-2">
+                    Explore
+                </span>
             </a>
+        </div>
+
+        <div class="flex justify-center">
+            <div class="inline-flex items-center gap-2 text-[10px] text-slate-500 bg-slate-950/50 border border-slate-800/80 px-3 py-1.5 rounded-full backdrop-blur-sm max-w-lg text-center leading-tight">
+                <svg class="w-3 h-3 text-slate-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <p><span class="text-cyan-500 font-bold">Transparency:</span> If you buy from here, Amazon gives me a commission. It costs you nothing extra and supports my research.</p>
+            </div>
         </div>
     </header>
 
-    <section class="py-12 border-y border-slate-800/50 bg-slate-900/30">
+    <section class="py-10 border-y border-slate-800/50 bg-slate-900/30">
         <div class="max-w-4xl mx-auto px-6">
-            <p class="text-center text-xs font-semibold text-slate-500 uppercase tracking-widest mb-8">The Tech Essentials Filter</p>
             <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="p-4">
-                    <div class="text-cyan-400 font-bold text-xl mb-1">+50 Hours</div>
-                    <p class="text-sm text-slate-400">Of research and analysis of real reviews.</p>
+                <div class="p-2">
+                    <div class="text-cyan-400 font-bold text-lg mb-1">Real Analysis</div>
+                    <p class="text-xs md:text-sm text-slate-400">I read the fine print and critical reviews for you.</p>
                 </div>
-                <div class="p-4 border-x border-slate-800/50">
-                    <div class="text-cyan-400 font-bold text-xl mb-1">Psychological Criteria</div>
-                    <p class="text-sm text-slate-400">Products that reduce stress and improve focus.</p>
+                <div class="p-2 border-x border-slate-800/50">
+                    <div class="text-cyan-400 font-bold text-lg mb-1">For Everyone</div>
+                    <p class="text-xs md:text-sm text-slate-400">Technology explained simply. For young and old.</p>
                 </div>
-                <div class="p-4">
-                    <div class="text-cyan-400 font-bold text-xl mb-1">0% Spam</div>
-                    <p class="text-sm text-slate-400">If a product isn't excellent, it's not here.</p>
+                <div class="p-2">
+                    <div class="text-cyan-400 font-bold text-lg mb-1">Only Quality</div>
+                    <p class="text-xs md:text-sm text-slate-400">If it has bad ratings, it doesn't make this list.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="product" class="py-24">
-        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+    <section id="explorar" class="py-16 px-6 max-w-5xl mx-auto scroll-mt-24">
+        
+        <div class="grid md:grid-cols-2 gap-4 md:gap-6 mb-12">
+            <a href="esenciales.html" class="group relative overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 hover:border-cyan-500/50 transition p-6 md:p-8 flex flex-col justify-between h-auto min-h-[12rem] md:h-56">
+                <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                <div class="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition">
+                    <svg class="w-12 h-12 text-cyan-900/50 group-hover:text-cyan-500/20 transform group-hover:rotate-12 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                </div>
+                <div class="relative z-10">
+                    <span class="text-cyan-400 font-bold text-[10px] uppercase tracking-widest mb-2 block">The Catalog</span>
+                    <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition">Essentials</h3>
+                    <p class="text-sm text-slate-400">Here you will find my selection of approved products. Organization, health, and focus without fillers.</p>
+                </div>
+                <div class="relative z-10 flex items-center gap-2 text-white font-bold text-xs mt-6 md:mt-4">
+                    See all products <span class="group-hover:translate-x-1 transition">→</span>
+                </div>
+            </a>
+
+            <a href="blog.html" class="group relative overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 hover:border-purple-500/50 transition p-6 md:p-8 flex flex-col justify-between h-auto min-h-[12rem] md:h-56">
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                <div class="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition">
+                    <svg class="w-12 h-12 text-purple-900/50 group-hover:text-purple-500/20 transform group-hover:-rotate-12 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                </div>
+                <div class="relative z-10">
+                    <span class="text-purple-400 font-bold text-[10px] uppercase tracking-widest mb-2 block">Strategies</span>
+                    <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-purple-400 transition">The Blog</h3>
+                    <p class="text-sm text-slate-400">Ideas to use technology to your advantage. Psychology, minimalism, and digital wellbeing.</p>
+                </div>
+                <div class="relative z-10 flex items-center gap-2 text-white font-bold text-xs mt-6 md:mt-4">
+                    Read articles <span class="group-hover:translate-x-1 transition">→</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="flex justify-center">
+            <a href="#product" class="px-8 py-3 bg-slate-900/50 text-white font-semibold rounded-full hover:bg-slate-800 transition border border-slate-700 text-sm md:text-base">
+                See recommendation of the month
+            </a>
+        </div>
+
+    </section>
+
+    <section id="product" class="py-20 border-t border-slate-900">
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div class="relative group cursor-pointer">
                 <div class="absolute -inset-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur opacity-20 group-hover:opacity-60 transition duration-500"></div>
                 <img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&q=80&w=1000" alt="Sony Headphones" class="relative rounded-xl shadow-2xl w-full object-cover grayscale group-hover:grayscale-0 transition duration-700 ease-in-out">
-                <div class="absolute bottom-4 left-4 bg-slate-900/90 backdrop-blur border border-slate-700 px-3 py-1 rounded text-xs text-cyan-400 font-bold">Verified Recommendation</div>
+                <div class="absolute bottom-4 left-4 bg-slate-900/90 backdrop-blur border border-slate-700 px-3 py-1 rounded text-[10px] text-cyan-400 font-bold">Top Sales & Ratings</div>
             </div>
 
             <div>
-                <h2 class="text-4xl font-bold text-white mb-6">Sony WH-1000XM5</h2>
-                <div class="prose prose-invert text-slate-300 mb-8 leading-relaxed">
-                    <p>We live in the age of distraction. After analyzing the current market, the <strong>Sony XM5</strong> are the ultimate investment in "mental hygiene".</p>
-                    <p>Their adaptive noise cancellation creates a near-perfect bubble of silence, allowing you to enter a <em>Flow</em> state in seconds.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Sony WH-1000XM5</h2>
+                <div class="prose prose-invert text-slate-300 mb-6 leading-relaxed text-sm md:text-base">
+                    <p>After analyzing the market, these headphones are the undisputed winners if you seek mental peace. They aren't just headphones, they are a tool to "switch off" the world.</p>
+                    <p>Ideal if you have noisy neighbors, study in libraries, or simply want to listen to music without distractions.</p>
                 </div>
-                <ul class="space-y-3 mb-8 text-sm text-slate-400 font-medium">
-                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Industry-leading Noise Cancellation (V1)</li>
-                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Comfort for 8+ hour workdays</li>
-                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Multipoint connection</li>
+                <ul class="space-y-2 mb-8 text-xs md:text-sm text-slate-400 font-medium">
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Best noise cancellation on the market.</li>
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Light and soft (don't squeeze the head).</li>
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Very long battery life.</li>
                 </ul>
-                <div class="border-l-2 border-cyan-500 pl-4 py-2 mb-8 bg-slate-900/50 rounded-r-lg">
-                    <p class="text-sm italic text-slate-400">"It's not an expense on audio, it's an investment in your career and peace of mind."</p>
-                    <p class="text-xs font-bold text-white mt-1">— Iza, Tech Essentials</p>
-                </div>
-                <a href="https://amzn.to/4pFLRXN" target="_blank" rel="nofollow noopener" class="group w-full flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-lg hover:shadow-[0_0_20px_rgba(6,182,212,0.5)] transition transform active:scale-95">
-                    <span>See Best Price on Amazon</span>
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                <a href="https://amzn.to/4pFLRXN" target="_blank" rel="nofollow noopener" class="group w-full flex items-center justify-center gap-3 px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-lg hover:shadow-[0_0_20px_rgba(6,182,212,0.5)] transition transform active:scale-95 text-sm">
+                    <span>Check price and reviews on Amazon</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                 </a>
             </div>
         </div>
@@ -114,103 +189,93 @@
 
     <section class="py-20 bg-slate-950 border-t border-slate-900">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-cyan-400 font-bold tracking-widest text-xs uppercase mb-2 block">Complete your Setup</span>
-                <h3 class="text-3xl md:text-4xl font-extrabold text-white">Tools for <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Flow State</span></h3>
-                <p class="text-slate-400 mt-4 max-w-2xl mx-auto">
-                    Focus doesn't depend solely on silence. Lighting, ergonomics, and deep reading are the other pillars of a productive mind.
+            <div class="text-center mb-12">
+                <span class="text-cyan-400 font-bold tracking-widest text-[10px] uppercase mb-2 block">People's Favorites</span>
+                <h3 class="text-2xl md:text-3xl font-extrabold text-white">Tools to stay <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">comfortable and focused</span></h3>
+                <p class="text-slate-400 mt-3 max-w-xl mx-auto text-sm">
+                    A small selection. Find more in <a href="esenciales.html" class="text-cyan-400 underline hover:text-white">Essentials</a>.
                 </p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-6">
+                
                 <div class="group bg-slate-900 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition duration-300 overflow-hidden flex flex-col">
-                    <div class="relative h-48 overflow-hidden">
-                        <div class="absolute top-3 right-3 bg-yellow-500 text-slate-900 text-[10px] font-bold px-2 py-1 rounded">BEST VALUE</div>
-                        <img src="https://images.unsplash.com/photo-1496115965489-21be7e6e59a0?auto=format&fit=crop&q=80&w=500" alt="ScreenBar" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
+                    <div class="relative h-48 overflow-hidden bg-white"> 
+                        <img src="https://m.media-amazon.com/images/I/51p1Ui5sa7L._AC_SL1500_.jpg" alt="Monitor Lamp" class="w-full h-full object-contain p-4 group-hover:scale-105 transition duration-500 opacity-90">
+                        <div class="absolute top-3 right-3 bg-yellow-500 text-slate-900 text-[10px] font-bold px-2 py-1 rounded z-10 shadow-sm">QUALITY/PRICE</div>
                     </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <h4 class="text-xl font-bold text-white mb-2">Quntis ScreenBar</h4>
-                        <p class="text-sm text-slate-400 mb-4 flex-1">The smart alternative. Eliminates screen glare and reduces eye strain for much less.</p>
-                        <a href="https://amzn.to/4aWS5i5" target="_blank" rel="nofollow noopener" class="w-full block text-center py-3 rounded-lg bg-slate-800 text-white font-semibold hover:bg-cyan-600 transition border border-slate-700 hover:border-transparent">See on Amazon</a>
+                    <div class="p-5 flex-1 flex flex-col">
+                        <h4 class="text-lg font-bold text-white mb-2">Monitor Light Bar</h4>
+                        <p class="text-xs text-slate-400 mb-4 flex-1">Avoid visual fatigue. Lights up your desk without glare on the screen. An essential basic.</p>
+                        <a href="https://amzn.to/4aWS5i5" target="_blank" rel="nofollow noopener" class="w-full block text-center py-2.5 rounded-lg bg-slate-800 text-white text-xs font-semibold hover:bg-cyan-600 transition border border-slate-700 hover:border-transparent">View on Amazon</a>
                     </div>
                 </div>
+                
                 <div class="group bg-slate-900 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition duration-300 overflow-hidden flex flex-col">
-                    <div class="relative h-48 overflow-hidden">
-                        <div class="absolute top-3 right-3 bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded">#1 BEST SELLER</div>
-                        <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&q=80&w=500" alt="Mouse Logitech" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
+                    <div class="relative h-48 overflow-hidden bg-white">
+                        <img src="https://m.media-amazon.com/images/I/618IJzC-fFL._AC_SL1500_.jpg" alt="Logitech Mouse" class="w-full h-full object-contain p-4 group-hover:scale-105 transition duration-500 opacity-90">
+                        <div class="absolute top-3 right-3 bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded z-10 shadow-sm">VERY COMFORTABLE</div>
                     </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <h4 class="text-xl font-bold text-white mb-2">Logitech MX Master 3S</h4>
-                        <p class="text-sm text-slate-400 mb-4 flex-1">Silent, ergonomic, and infinite scroll. The gold standard for professionals.</p>
-                        <a href="https://amzn.to/49EkWpj" target="_blank" rel="nofollow noopener" class="w-full block text-center py-3 rounded-lg bg-slate-800 text-white font-semibold hover:bg-cyan-600 transition border border-slate-700 hover:border-transparent">See on Amazon</a>
+                    <div class="p-5 flex-1 flex flex-col">
+                        <h4 class="text-lg font-bold text-white mb-2">Logitech MX Mouse</h4>
+                        <p class="text-xs text-slate-400 mb-4 flex-1">Designed to care for your wrist. The most recommended mouse by professionals.</p>
+                        <a href="https://amzn.to/49EkWpj" target="_blank" rel="nofollow noopener" class="w-full block text-center py-2.5 rounded-lg bg-slate-800 text-white text-xs font-semibold hover:bg-cyan-600 transition border border-slate-700 hover:border-transparent">View on Amazon</a>
                     </div>
                 </div>
+
                 <div class="group bg-slate-900 rounded-2xl border border-slate-800 hover:border-cyan-500/50 transition duration-300 overflow-hidden flex flex-col">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=500" alt="Kindle" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
+                    <div class="relative h-48 overflow-hidden bg-white">
+                        <img src="https://m.media-amazon.com/images/I/51kc5N5DOSL._AC_SL1000_.jpg" alt="Kindle" class="w-full h-full object-contain p-4 group-hover:scale-105 transition duration-500 opacity-90">
                     </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <h4 class="text-xl font-bold text-white mb-2">Amazon Kindle (2024)</h4>
-                        <p class="text-sm text-slate-400 mb-4 flex-1">The lightest and most compact model. Reclaim deep reading without notifications.</p>
-                        <a href="https://amzn.to/49EUgEP" target="_blank" rel="nofollow noopener" class="w-full block text-center py-3 rounded-lg bg-slate-800 text-white font-semibold hover:bg-cyan-600 transition border border-slate-700 hover:border-transparent">See on Amazon</a>
+                    <div class="p-5 flex-1 flex flex-col">
+                        <h4 class="text-lg font-bold text-white mb-2">Amazon Kindle</h4>
+                        <p class="text-xs text-slate-400 mb-4 flex-1">Carry your library with you. The e-ink screen cares for your eyes just like real paper.</p>
+                        <a href="https://amzn.to/49EUgEP" target="_blank" rel="nofollow noopener" class="w-full block text-center py-2.5 rounded-lg bg-slate-800 text-white text-xs font-semibold hover:bg-cyan-600 transition border border-slate-700 hover:border-transparent">View on Amazon</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-slate-900/50 border-t border-slate-900">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <span class="text-cyan-400 font-bold tracking-widest text-xs uppercase mb-2 block">Methodology</span>
-                <h3 class="text-3xl font-extrabold text-white">How to enter "The Zone" in 15 minutes</h3>
-                <p class="text-slate-400 mt-4">It's not enough to buy technology. You have to use it with intention. This is the routine I recommend for 4-hour deep work sessions.</p>
+    <section class="py-20 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
+            <div class="relative shrink-0">
+                <div class="absolute -inset-4 bg-gradient-to-tr from-cyan-500 to-blue-600 rounded-full blur opacity-30"></div>
+                <img src="../Pfp.jpg" alt="Iza Ogbinar" class="relative w-28 h-28 md:w-32 md:h-32 rounded-full border-2 border-white object-cover">
             </div>
-
-            <div class="grid md:grid-cols-4 gap-4 text-center">
-                <div class="p-6 bg-slate-950 rounded-xl border border-slate-800">
-                    <div class="text-3xl mb-4">💡</div>
-                    <h4 class="font-bold text-white mb-2">Step 1: Light</h4>
-                    <p class="text-xs text-slate-400">Turn on the ScreenBar in cool tone (6500K). This reduces melatonin and alerts your brain.</p>
-                </div>
-                <div class="p-6 bg-slate-950 rounded-xl border border-slate-800">
-                    <div class="text-3xl mb-4">🎧</div>
-                    <h4 class="font-bold text-white mb-2">Step 2: Isolation</h4>
-                    <p class="text-xs text-slate-400">Put on the Sony XM5. No music with lyrics. Use "Brown Noise" or "Binaural Beats" at 40Hz.</p>
-                </div>
-                <div class="p-6 bg-slate-950 rounded-xl border border-slate-800">
-                    <div class="text-3xl mb-4">🍅</div>
-                    <h4 class="font-bold text-white mb-2">Step 3: Block</h4>
-                    <p class="text-xs text-slate-400">Set a timer for 50 minutes. During this time, the phone stays in another room.</p>
-                </div>
-                <div class="p-6 bg-slate-950 rounded-xl border border-slate-800">
-                    <div class="text-3xl mb-4">📖</div>
-                    <h4 class="font-bold text-white mb-2">Step 4: Reset</h4>
-                    <p class="text-xs text-slate-400">During the break, don't check social media. Read 2 pages on the Kindle to keep the brain in 'mono-task' mode.</p>
+            
+            <div class="text-center md:text-left">
+                <span class="text-cyan-400 font-bold tracking-widest text-[10px] uppercase mb-2 block">My Mission</span>
+                <h3 class="text-2xl font-bold text-white mb-3">Hi, I'm Iza.</h3>
+                <div class="prose prose-invert text-slate-400 leading-relaxed text-sm">
+                    <p class="mb-3">
+                        I am a tech and human psychology enthusiast. I know how hard it is to choose what to buy when there are so many options and fake opinions on the internet.
+                    </p>
+                    <p>
+                        <strong>My promise is simple:</strong> I research thoroughly for you. I read the fine print, look for real reviews, and discard everything that isn't excellent. Here you will only see products that I would buy for my own family.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 text-center text-slate-600 text-[11px] px-6 border-t border-slate-900 bg-black">
-        <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-6">
+    <footer class="py-10 text-center text-slate-600 text-[10px] px-6 border-t border-slate-900 bg-black">
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-4">
             <a href="privacidad.html" class="text-slate-500 hover:text-cyan-400 transition font-bold">Privacy Policy</a>
             <span class="hidden md:inline text-slate-700">|</span>
-            <span class="text-slate-500 cursor-help" title="Affiliate Disclosure">Legal Notice</span>
+            <span class="text-slate-500">Legal Notice</span>
             <span class="hidden md:inline text-slate-700">|</span>
-            <a href="mailto:izadequino@gmail.com" class="text-slate-500 hover:text-cyan-400 transition">Contact</a>
+            <a href="mailto:hola@techesencial.com" class="text-slate-500 hover:text-cyan-400 transition">Contact</a>
         </div>
-        <p class="max-w-xl mx-auto leading-relaxed mb-4">
-            <strong>Transparency:</strong> Tech Essentials participates in the Amazon EU Associates Program, designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.es.
+        <p class="max-w-xl mx-auto leading-relaxed mb-3">
+            <strong>Transparency:</strong> Tech Essentials participates in the Amazon EU Associates Program. This means that if you buy something through our links, you help support this site at no extra cost to you.
         </p>
-        <p class="text-slate-500 text-xs italic mt-2">*Note: All product links direct to Amazon Spain (Amazon.es). Perfect for expats living in Europe.</p>
-        <p class="text-slate-700 mt-4">&copy; 2026 Tech Essentials. All rights reserved.</p>
+        <p class="text-slate-700">&copy; 2026 Tech Essentials.</p>
     </footer>
 
     <div id="cookie-banner" class="fixed bottom-0 w-full bg-slate-900/95 backdrop-blur border-t border-slate-700 p-4 text-center z-50 hidden shadow-[0_-5px_20px_rgba(0,0,0,0.5)]">
         <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
             <p class="text-xs text-slate-400">
-                We use cookies to improve your experience and manage affiliate links. 
-                By continuing, you accept our policy.
+                We use cookies to ensure the website works well and to manage Amazon links.
             </p>
             <button onclick="document.getElementById('cookie-banner').style.display='none'; localStorage.setItem('cookiesAccepted', 'true');" 
                     class="px-6 py-2 bg-cyan-500 text-white text-xs font-bold rounded hover:bg-cyan-400 transition whitespace-nowrap">
@@ -218,7 +283,15 @@
             </button>
         </div>
     </div>
+    
     <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+        
         if (!localStorage.getItem('cookiesAccepted')) {
             document.getElementById('cookie-banner').style.display = 'block';
         }

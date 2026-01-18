@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "titulo": "The 2-Minute Rule: Order in Digital Chaos",
+        "resumen": "If it takes less than 2 minutes to organize that file or answer that email, do it now. How to apply this Stoic principle to your digital life.",
+        "categoria": "Productivity",
+        "imagen": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=800",
+        "fecha": "Jan 14, 2026",
+        "link": "art1.html"
+    },
+    {
+        "id": 2,
+        "titulo": "Why Does Paper Make Us Smarter?",
+        "resumen": "Handwriting activates brain areas that typing ignores. Why you should always have an analog notebook next to your laptop.",
+        "categoria": "Science",
+        "imagen": "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800",
+        "fecha": "Jan 10, 2026",
+        "link": "art2.html"
+    },
+    {
+        "id": 3,
+        "titulo": "White Noise vs. Silence: What's Better?",
+        "resumen": "We analyze if it's better to work in absolute silence (with earplugs) or with ambient sound. The answer depends on your brain type.",
+        "categoria": "Focus",
+        "imagen": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=800",
+        "fecha": "Jan 05, 2026",
+        "link": "art3.html"
+    },
+    {
+        "id": 4,
+        "titulo": "Digital Minimalism: Clean Your Desktop",
+        "resumen": "Having 50 icons on the desktop generates visual cortisol. Quick guide to having a work environment that gives you peace of mind.",
+        "categoria": "Organization",
+        "imagen": "https://images.unsplash.com/photo-1706615737134-a7778e037715?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "fecha": "Dec 28, 2025",
+        "link": "art4.html"
+    },
+    {
+        "id": 5,
+        "titulo": "Decision Fatigue When Buying Tech",
+        "resumen": "Do you freeze when choosing between two almost identical products? I teach you psychological tricks to make purchase decisions faster.",
+        "categoria": "Psychology",
+        "imagen": "https://images.unsplash.com/photo-1555421689-d68471e189f2?auto=format&fit=crop&q=80&w=800",
+        "fecha": "Dec 20, 2025",
+        "link": "art5.html"
+    },
+    {
+        "id": 6,
+        "titulo": "Cheap Dopamine: Why You Can't Quit Your Phone",
+        "resumen": "Notifications are designed to hijack your attention. Physical tools to regain control of your time.",
+        "categoria": "Wellbeing",
+        "imagen": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800",
+        "fecha": "Dec 15, 2025",
+        "link": "art6.html"
+    }
+]

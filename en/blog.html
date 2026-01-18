@@ -3,74 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Tech Essentials</title>
+    <title>Blog | Tech Essentials</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
     <link rel="icon" type="image/png" href="../favicon.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="../favicon.png" sizes="64x64">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
-    <style>body { font-family: 'Inter', sans-serif; }</style>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
 </head>
-<body class="bg-slate-950 text-slate-50 antialiased pb-16">
+<body class="bg-slate-950 text-slate-50 antialiased pb-16 overflow-x-hidden">
 
-    <nav class="w-full py-6 px-6 flex justify-between items-center max-w-4xl mx-auto border-b border-slate-800/50 bg-slate-950">
-        <a href="index.html" class="text-xl font-extrabold tracking-tighter text-white flex items-center gap-3">
-            <img src="../favicon.png" alt="Logo" class="h-8 w-auto object-contain drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">
-            Tech Essentials.
-        </a>
-        <div class="flex items-center gap-4 md:gap-8">
-            <a href="blog.html" class="text-sm font-bold text-white transition">Blog</a>
+    <nav class="fixed top-0 left-0 w-full z-50 border-b border-slate-800/50 bg-slate-950/80 backdrop-blur-md">
+        <div class="max-w-5xl mx-auto px-4 md:px-6 h-16 md:h-20 flex justify-between items-center">
             
-            <a href="../blog.html" class="group flex items-center gap-2 px-3 py-2 rounded-full hover:bg-white/5 transition-all duration-300" title="Volver a Español">
-                <svg class="w-5 h-5 text-slate-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
-                </svg>
-                <span class="hidden sm:inline text-xs font-bold text-slate-400 group-hover:text-white uppercase tracking-wide">Español</span>
+            <a href="index.html" class="text-lg font-extrabold tracking-tighter text-white flex items-center gap-2 z-50 whitespace-nowrap">
+                <img src="../favicon.png" alt="Logo" class="h-6 w-auto object-contain drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">
+                Tech Essentials.
             </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-xs font-medium text-slate-300 hover:text-white transition">Home</a>
+                <a href="esenciales.html" class="text-xs font-medium text-slate-300 hover:text-white transition">Essentials</a>
+                <a href="blog.html" class="text-xs font-bold text-white transition">Blog</a>
+                
+                <a href="../blog.html" class="group flex items-center gap-2 px-2 py-2 rounded-full hover:bg-white/5 transition-all duration-300">
+                    <svg class="w-4 h-4 text-slate-400 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+                    <span class="hidden sm:inline text-[10px] font-bold text-slate-400 group-hover:text-white uppercase tracking-wide">Español</span>
+                </a>
+
+                <a href="index.html#product" class="text-[10px] font-bold text-cyan-400 border border-cyan-400/30 px-3 py-1.5 rounded-full hover:bg-cyan-400/10 transition whitespace-nowrap">RECOMMENDED</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-2">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute top-16 left-0 w-full bg-slate-950 border-b border-slate-800 shadow-2xl">
+            <div class="flex flex-col px-6 py-4 space-y-4">
+                <a href="index.html" class="text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-slate-800">Home</a>
+                <a href="esenciales.html" class="text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-slate-800">Essentials</a>
+                <a href="blog.html" class="text-sm font-bold text-white py-2 border-b border-slate-800">Blog</a>
+                
+                <a href="../blog.html" class="text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-slate-800 flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+                    Español
+                </a>
+                <a href="index.html#product" class="text-sm font-bold text-cyan-400 py-2">
+                    SEE RECOMMENDED
+                </a>
+            </div>
         </div>
     </nav>
 
-    <header class="py-20 px-6 text-center max-w-3xl mx-auto">
-        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-white">
-            Productivity <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Log</span>
+    <header class="pt-32 pb-12 px-6 text-center max-w-3xl mx-auto relative overflow-hidden">
+         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px] h-[500px] bg-cyan-900/20 rounded-full blur-[90px] -z-10 pointer-events-none"></div>
+
+        <span class="inline-block py-1 px-3 rounded-full bg-slate-900 text-cyan-400 text-[10px] font-bold uppercase tracking-widest mb-4 border border-slate-800 shadow-sm">
+            Thoughts
+        </span>
+        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-white">
+            Ideas & <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Strategies</span>
         </h1>
-        <p class="text-slate-400">Deep analysis, neuroscience, and technology to work better.</p>
+        <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+            It's not just about buying things, but using them to live with more calm and purpose.
+        </p>
     </header>
 
-    <section class="max-w-4xl mx-auto px-6 grid md:grid-cols-2 gap-8">
-        <article class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition group">
-            <a href="articulo-1.html">
-                <div class="h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?auto=format&fit=crop&q=80&w=500" alt="Dopamine" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
-                </div>
-                <div class="p-6">
-                    <span class="text-xs text-cyan-400 font-bold uppercase tracking-wider">Mental Health</span>
-                    <h2 class="text-xl font-bold text-white mt-2 mb-3 group-hover:text-cyan-400 transition">Tech Dopamine Fast: 24h Guide</h2>
-                    <p class="text-sm text-slate-400 mb-4">Can't put your phone down? How to reset using tech.</p>
-                    <span class="text-xs text-slate-500">Read article →</span>
-                </div>
-            </a>
-        </article>
+    <section class="max-w-7xl mx-auto px-4 md:px-6 pb-20 relative group/slider">
+        <button id="scrollLeft" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-slate-900/80 hover:bg-cyan-500 hover:text-white border border-slate-700 text-cyan-400 p-3 rounded-full backdrop-blur-md shadow-2xl transition-all opacity-0 group-hover/slider:opacity-100 disabled:opacity-0 translate-x-0 hover:scale-110">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
 
-        <article class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition group">
-            <a href="articulo-2.html">
-                <div class="h-48 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1606836591695-4d58a73eba1e?auto=format&fit=crop&q=80&w=500" alt="Desk Accessories" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-80 group-hover:opacity-100">
-                </div>
-                <div class="p-6">
-                    <span class="text-xs text-cyan-400 font-bold uppercase tracking-wider">Organization</span>
-                    <h2 class="text-xl font-bold text-white mt-2 mb-3 group-hover:text-cyan-400 transition">5 Tech Investments under €30</h2>
-                    <p class="text-sm text-slate-400 mb-4">Physical clutter creates mental clutter. Small investments for huge impact.</p>
-                    <span class="text-xs text-slate-500">Read article →</span>
-                </div>
-            </a>
-        </article>
+        <div id="blogContainer" class="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scroll-smooth scrollbar-hide px-2">
+            <div class="text-center w-full text-slate-500 animate-pulse text-xs py-10">Loading thoughts...</div>
+        </div>
+
+        <button id="scrollRight" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-slate-900/80 hover:bg-cyan-500 hover:text-white border border-slate-700 text-cyan-400 p-3 rounded-full backdrop-blur-md shadow-2xl transition-all opacity-100 md:opacity-0 md:group-hover/slider:opacity-100 translate-x-0 hover:scale-110">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </button>
     </section>
 
-    <footer class="mt-20 py-10 text-center text-slate-600 text-xs border-t border-slate-900">
-        <p>&copy; 2026 Tech Essentials.</p>
+    <footer class="mt-10 py-10 text-center text-slate-600 text-[10px] border-t border-slate-900 bg-black">
+        <a href="index.html" class="hover:text-cyan-400 transition font-bold">Back to Home</a> | <a href="esenciales.html" class="hover:text-cyan-400 transition">Essentials</a>
+        <p class="mt-3">&copy; 2026 Tech Essentials.</p>
     </footer>
+
+    <script>
+        const btnMenu = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btnMenu.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+
+        const blogContainer = document.getElementById('blogContainer');
+        const btnLeft = document.getElementById('scrollLeft');
+        const btnRight = document.getElementById('scrollRight');
+
+        fetch('blog.json').then(res => res.json()).then(data => renderBlog(data));
+
+        function renderBlog(articles) {
+            blogContainer.innerHTML = '';
+            articles.forEach(article => {
+                const articleHTML = `
+                    <article class="min-w-[300px] md:min-w-[350px] snap-center group bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-cyan-500/30 transition flex flex-col h-auto shadow-lg">
+                        <a href="${article.link}" class="block overflow-hidden h-48 relative">
+                            <img src="${article.imagen}" alt="${article.titulo}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
+                            <div class="absolute top-3 left-3 bg-black/60 backdrop-blur px-2 py-1 rounded text-[10px] text-white font-bold uppercase tracking-wider">${article.categoria}</div>
+                        </a>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="text-[10px] text-cyan-400 font-bold mb-2">${article.fecha}</div>
+                            <h3 class="text-lg font-bold text-white mb-3 leading-tight group-hover:text-cyan-400 transition">${article.titulo}</h3>
+                            <p class="text-xs text-slate-400 mb-5 flex-1 leading-relaxed line-clamp-3">${article.resumen}</p>
+                            <a href="${article.link}" class="inline-flex items-center gap-2 text-xs font-bold text-white hover:text-cyan-400 transition mt-auto">Read article <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                        </div>
+                    </article>`;
+                blogContainer.insertAdjacentHTML('beforeend', articleHTML);
+            });
+        }
+
+        btnRight.addEventListener('click', () => { blogContainer.scrollBy({ left: 360, behavior: 'smooth' }); });
+        btnLeft.addEventListener('click', () => { blogContainer.scrollBy({ left: -360, behavior: 'smooth' }); });
+    </script>
 </body>
 </html>
